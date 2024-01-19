@@ -1,0 +1,53 @@
+.offers{
+  margin-bottom: 200px;
+  &__container{
+    .container;
+  }
+
+  &__title{
+    text-align: center;
+    font-family: @font2;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.44px;
+    text-transform: uppercase;
+    margin-bottom: 46px;
+  }
+
+  &__btns{
+    display: flex;
+    justify-content: center;
+    margin-left: -1.5%;
+  }
+
+  &__event-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: auto;
+    height: 52px;
+
+    color: @white;
+    text-align: center;
+    background-color: @red;
+    &:hover {
+      @media (hover :hover){
+          background-color: @red_dark;
+          color: @white;
+      }
+  }
+  }
+
+  &__rent-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 245px;
+    height: 52px;
+    margin-left: 106px;
+  }
+
+}

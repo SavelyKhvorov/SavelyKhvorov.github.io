@@ -1,0 +1,30 @@
+.upcoming{
+    .container;
+    background-color: @white; //TODO
+    position: relative;
+    padding: 84px 0;
+    z-index: 1;
+
+    &__slider{
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: row-reverse;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    right: -100%; 
+    left: -100%; 
+    background-color: @white; 
+    z-index: -1;
+}
+
+}
