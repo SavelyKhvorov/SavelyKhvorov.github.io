@@ -2385,7 +2385,11 @@ body {
           flex-direction: row;
   position: relative;
 }
+.page-footer__other-policy {
+  margin-top: 1%;
+}
 .page-footer__other-cookies {
+  margin-top: 1%;
   margin-left: 4.5%;
 }
 .page-footer__other-media {
@@ -2397,10 +2401,26 @@ body {
           justify-content: space-between;
   width: 160px;
   margin-left: 16%;
+  margin-top: -1.5%;
 }
 .page-footer__other-promote {
   position: absolute;
   right: 0;
+  bottom: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 296px;
+}
+.page-footer__other-promote-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
