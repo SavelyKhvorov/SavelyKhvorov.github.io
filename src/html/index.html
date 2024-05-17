@@ -8,16 +8,17 @@
         <main class="main">
             <div class="home">
                 <header class="main-header home__main-header">
-                    <h1 class="main-header__title">Арт - пространство</h1>
-                    <picture class="main-header__picture">
-                        <img src="assets/images/lenni.png"
-                            class="main-header__img" alt="main-header"/>
-                    </picture>
+                <h1 class="main-header__title">Арт - пространство</h1>
+                <picture class="main-header__picture">
+                    <img src="assets/images/lenni.png" class="main-header__img" alt="lenni">
+                </picture>
+                <div class="main-header__container">
                     <p class="main-header__text">
-                        для людей, горящих сердцЕМ и делом место для настоящего
+                    для людей, горящих сердцем и делом
+                    место для настоящего
                     </p>
-                    
-                </header>
+                </div>
+            </header>
 
                 @@include("blocks/offers.html", {class: 'home__offers'})
                 @@include("blocks/about.html", {class: 'home__about'})
@@ -32,6 +33,16 @@
         @@include('blocks/page-footer.html')
 
         @@include("blocks/event-pp.html")
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+        <script src="scripts/swiper.min.js"></script>
+        <script src="scripts/jquery.selectric.min.js"></script>
+        <script src="scripts/jquery.mask.min.js"></script>
+        <script src="scripts/air-datepicker.js"></script>
+        <script src="scripts/jquery.validate.min.js"></script>
+        <script src="scripts/jquery.validate-init.min.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
 
 </html>

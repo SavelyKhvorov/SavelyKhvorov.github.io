@@ -33,15 +33,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
   }
   &__order {
     grid-area: order;
+    margin-top: 50px;
   }
   &__scheme {
     grid-area: scheme;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @media @bw1020{
+      margin: 0 auto;
+      width: 628px;
+      padding: 0 0 300px 0;
+    }
+    @media @bw700{
+      width: 280px;
+      padding: 0 0 100px 0;
+    }
   }
 
   &__legend {
@@ -50,6 +62,13 @@
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
+    margin-top: 50px;
+    @media @bw700{
+      text-align: left;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+    }
   }
 
   &__section-title{
@@ -59,6 +78,21 @@
     line-height: 25px;
     &--mb30{
       margin-bottom: 30px;
+      @media @bw1020{
+        margin-bottom: -2px;
+      }
+      @media @bw700{
+        font-size: 16px;
+      }
+    }
+    &--mw100{
+      @media @bw1020{
+        max-width: 100%;
+      }
+    }
+    @media @bw1020{
+      max-width: 191px;
+      font-size: 16px;
     }
   }
 
@@ -66,6 +100,9 @@
     margin-bottom: 10px;
     &:last-child{
       margin-bottom: 0;
+    }
+    @media @bw1020{
+      margin-bottom: 15px;
     }
   }
 
@@ -77,6 +114,13 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+    @media @bw1020{
+      font-size: 11px;
+      padding: 6px 47px;
+    }
+    @media @bw700{
+      font-size: 11px;
+    }
   }
 
   &__scheme-container{
@@ -111,6 +155,13 @@
     justify-content: space-between;
     align-items: baseline;
   }
+
+  &__tickets-list {
+    @media @bw700{
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+  }
   &__qty {
     &::after {
       content: " " attr(data-caption) " | " attr(data-price);
@@ -143,6 +194,9 @@
       margin-left: 4px;
       font-size: 0.95em;
     }
+    @media @bw700{
+      margin-bottom: 40px;
+    }
   }
 
   &__price{
@@ -150,6 +204,14 @@
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 35px;
+    @media @bw1020{
+      margin-bottom: 37px;
+    }
+    @media @bw700{
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+    }
   }
 
   &__price-item{
@@ -191,6 +253,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @media @bw700{
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+    }
   }
 
   &__note{
@@ -202,6 +269,9 @@
     padding-top: 2px;
     font-size: 14px;
     line-height: 19px;
+    @media @bw1020{
+      margin-bottom: 20px;
+    }
 
     &--free{
       &::before,

@@ -14,9 +14,24 @@
     font-size: 44px;
     font-weight: 700;
     color: @black;
+    @media @bw1020{
+      font-size: 26px;
+      line-height: 35.41px;
+      margin-top: 53px;
+      margin-bottom: 16px;
+    }
+    @media @bw500{
+      margin-top: 30px;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
     &--w868{
       max-width: 868px;
       width: 100%;
+      @media @bw1660{
+        max-width: 831px;
+        width: 100%;
+    }
     }
     // &--mt{
     //   margin-top: -120px;
@@ -34,14 +49,47 @@
     font-weight: 400;
     font-size: 18px;
     color: @black;
+    @media @bw1660{
+      max-width: 830px;
+  }
+  @media @bw1020{
+    font-size: 16px;
+    padding-left: 71px;
+    line-height: 21.79px;
+    margin-bottom: 80px;
+  }
+  @media @bw500{
+    font-size: 16px;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
     &--2{
       grid-area: text;
       margin-left: auto;
+      @media @bw1020{
+        margin-left: -15%;
+    }
+    @media @bw500{
+      margin-left: +15%;
+  }
     }
 
-    &--90{
+    &--mb90{
       grid-area: text;
-      margin-bottom: 90px;;
+      margin-bottom: 90px;
+      @media @bw1660{
+        max-width: 830px;
+    }
+    @media @bw1020{
+      font-size: 16px;
+      padding-left: 0;
+      line-height: 21.79px;
+      max-width: 280px;
+    }
+    @media @bw500{
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
     }
   }
 
@@ -75,6 +123,20 @@
     "text text text";
     gap: 60px;
     grid-template-columns: 1fr 1fr 404px;
+    @media @bw1660{
+      grid-template-columns: 1fr 1fr 393px;
+      gap: 39px;
+    }
+    @media @bw1020{
+      grid-template-areas: "picture picture" "title picture2" "text picture2";
+      grid-template-columns: 1fr 262px;
+      gap: 27px;
+    }
+    @media @bw500{
+      grid-template-areas: "picture picture" "title title" "text text" "picture2 picture2";
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
   }
   
   &__picture2{
@@ -84,6 +146,16 @@
     display: block;
     // max-width: 404px;
     // width: 30.284%;
+    @media @bw1020{
+      -ms-flex-item-align: start;
+      align-self: start;
+      margin-top: 25px;
+    }
+    @media @bw500{
+      margin-top: 0;
+      margin-bottom: 50px;
+      margin-left: 87px;
+    }
 
     &::before{
       content: "";
@@ -98,6 +170,10 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 60px;
+    @media @bw1020{
+      display: block;
+    }
+
   }
 
   &__picture3{
@@ -132,10 +208,38 @@
     bottom: 0;
     width: calc(100%-58px);
     object-fit: contain;
+    @media @bw500{
+      left: 11px;
+      top: 5px;
+      width: calc(100% - 13px);
+    }
   }
 
   &__block3-wrapper{
     max-width: 344px;
     width: 100%;
+    @media @bw1020{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 80px;
+      max-width: 100%;
+    }
+    @media @bw500{
+      display: block;
+    }
+  }
+
+  &__link{
+    @media @bw1020{
+      margin-left: auto;
+      padding-top: 54px;
+      width: 100%;
+      max-width: 262px;
+    }
+    @media @bw500{
+      margin-left: 0;
+      max-width: 280px;
+    }
   }
 }

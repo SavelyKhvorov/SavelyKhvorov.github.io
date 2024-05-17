@@ -25,7 +25,15 @@
   }
   &__wrapper{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media @bw500{
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 59px;
+    }
   }
   &__nav{
     margin-right: 30px;
@@ -43,7 +51,17 @@
       width: 4px;
       background-color: @red;
     }
+
+    @media @bw500{
+      gap: 27px;
+      padding-left: 22px;
+    }
+
+    @media @bw370{
+      margin-bottom: 20%
+    }
   }
+
   &__nav-link{
     display: block;
     text-decoration: none;
@@ -68,12 +86,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 20px;
+    // margin-bottom: -0.5%;
   }
 
 
   &__other{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     position: relative;
   }
@@ -91,11 +110,16 @@
 
   &__other-media{
     display: flex;
-    justify-content: space-between;
-    width: 160px;
-    // margin-left: 203px;
-    margin-left: 16%;
-    margin-top: -1.5%;
+    justify-content: space-between; /* Центрирование по горизонтали */
+    max-width:160px;
+    width: 100%;
+    margin: auto; /* Центрирование по горизонтали */
+    margin-top: 5%;
+    margin-bottom: -10%;
+    @media @bw768 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
 
   &__other-promote{
@@ -107,6 +131,9 @@
     align-items: center;
     justify-content: space-between;
     width: 296px;
+    @media @bw700{
+      margin-bottom: -60px;
+    }
   }
 
   &__other-promote-link{
@@ -116,5 +143,6 @@
     justify-content: space-between;
     width: 296px;
   }
+
 
 }
